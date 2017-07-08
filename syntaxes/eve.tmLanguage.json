@@ -1,0 +1,48 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Eve",
+	"patterns": [
+		{
+			"include": "#block"
+		}
+	],
+	"repository": {
+		"block": {
+			"name": "meta.block",
+			"begin": "~~~",
+			"end": "~~~",
+			"patterns": [
+				{
+					"name": "keyword.control.eve",
+					"match": "\\b(search|bind|commit)\\b"
+				},
+				{
+					"name": "constant.character.escape.eve",
+					"match": "\\\\."
+				},
+				{
+					"name": "string.quoted.double.eve",
+					"begin": "\"",
+					"end": "\"",
+					"patterns": [
+						{
+							"name": "constant.character.escape.eve",
+							"match": "\\\\."
+						}
+					]
+				},
+				{
+					"name": "string.quoted.double.eve",
+					"match": "\\b([0-9]+)\\b"
+				},
+				{
+					"name": "comment.line",
+					"match": "//.+"
+				}
+			]
+		}
+
+
+	},
+	"scopeName": "eve"
+}
