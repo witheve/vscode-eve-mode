@@ -3,6 +3,21 @@
 	"name": "Eve",
 	"patterns": [
 		{
+			//headers
+			"name": "markup.heading",
+			"match": "^#.+"
+		},
+		{
+			// unordered list
+			"name": "markup.heading",
+			"match": "^\\-"
+		},
+		{
+			// inline code
+			"name": "string.quoted",
+			"match": "`.+`"
+		},
+		{
 			"include": "#block"
 		}
 	],
@@ -32,7 +47,7 @@
 					]
 				},
 				{
-					"name": "string.quoted.double.eve",
+					"name": "constant.numeric.integer",
 					"match": "\\b([0-9]+)\\b"
 				},
 				{
@@ -41,8 +56,6 @@
 				}
 			]
 		}
-
-
 	},
 	"scopeName": "eve"
 }
