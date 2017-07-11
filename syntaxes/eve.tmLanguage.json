@@ -3,17 +3,14 @@
 	"name": "Eve",
 	"patterns": [
 		{
-			//headers
 			"name": "markup.heading",
 			"match": "^#.+"
 		},
 		{
-			// unordered list
 			"name": "markup.heading",
 			"match": "^\\-"
 		},
 		{
-			// inline code
 			"name": "string.quoted",
 			"match": "`.+`"
 		},
