@@ -12,7 +12,7 @@
 		},
 		{
 			"name": "string.quoted",
-			"match": "`.+`"
+			"match": "`[^`]*`"
 		},
 		{
 			"include": "#block"
@@ -26,11 +26,15 @@
 			"patterns": [
 				{
 					"name": "keyword.control.eve",
-					"match": "\\b(search|bind|commit)\\b"
+					"match": "\\b(search|bind|commit|if|else|then|not)\\b"
 				},
 				{
-					"name": "constant.character.escape.eve",
-					"match": "\\\\."
+					"name": "variable.other",
+					"match": "#\\S+"
+				},
+				{
+					"name": "variable.function",
+					"match": "\\S+(?=\\[)"
 				},
 				{
 					"name": "string.quoted.double.eve",
@@ -40,12 +44,26 @@
 						{
 							"name": "constant.character.escape.eve",
 							"match": "\\\\."
+						},
+						{
+							"name": "keyword.control.eve",
+							"begin": "{{",
+							"end": "}}",
+							"patterns": [
+								{
+									"name": "constant.numeric.integer",
+									"match": "[^}]*"
+								}
+							]
 						}
 					]
 				},
 				{
 					"name": "constant.numeric.integer",
 					"match": "\\b([0-9]+)\\b"
+				},				{
+					"name": "constant.language",
+					"match": "true|false"
 				},
 				{
 					"name": "comment.line",
