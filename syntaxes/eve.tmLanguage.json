@@ -63,7 +63,7 @@
 					"match": "\\b([0-9]+)\\b"
 				},				{
 					"name": "constant.language",
-					"match": "true|false"
+					"match": "true|false|none"
 				},
 				{
 					"name": "comment.line",
