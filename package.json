@@ -11,6 +11,9 @@
     "categories": [
         "Languages"
     ],
+    "repository": {
+        "url": "https://github.com/witheve/vscode-eve-mode.git"
+    },
     "contributes": {
         "languages": [
             {
