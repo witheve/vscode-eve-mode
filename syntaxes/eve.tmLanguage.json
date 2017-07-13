@@ -3,6 +3,9 @@
 	"name": "Eve",
 	"patterns": [
 		{
+			"include": "#block"
+		},
+		{
 			"name": "markup.heading",
 			"match": "^#.+"
 		},
@@ -13,16 +16,13 @@
 		{
 			"name": "string.quoted",
 			"match": "`[^`]*`"
-		},
-		{
-			"include": "#block"
 		}
 	],
 	"repository": {
 		"block": {
 			"name": "meta.block",
-			"begin": "~~~",
-			"end": "~~~",
+			"begin": "~~~|```",
+			"end": "~~~|```",
 			"patterns": [
 				{
 					"name": "keyword.control.eve",
