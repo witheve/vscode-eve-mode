@@ -21,16 +21,20 @@
 	"repository": {
 		"block": {
 			"name": "meta.block",
-			"begin": "~~~|```",
-			"end": "~~~|```",
+			"begin": "~~~|```|(^|^ +)(?=(search|bind|commit)\\n)",
+			"end": "~~~|```|(?<=end)\n",
 			"patterns": [
 				{
 					"name": "keyword.control.eve",
-					"match": "\\b(search|bind|commit|if|else|then|not)\\b"
+					"match": "^search|end"
+				},
+				{
+					"name": "keyword.control.eve",
+					"match": "\\b(search|bind|commit|watch|if|else|then|not)\\b"
 				},
 				{
 					"name": "variable.other",
-					"match": "#\\S+"
+					"match": "(#([A-Z]|[a-z]|/|-)+)"
 				},
 				{
 					"name": "variable.function",
