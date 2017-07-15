@@ -2,7 +2,7 @@
     "name": "Eve",
     "displayName": "Eve",
     "description": "Support for the Eve language in Visual Studio Code",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "publisher": "witheve",
     "icon": "images/logo.png",
     "engines": {
