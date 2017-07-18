@@ -25,6 +25,10 @@
 			"end": "~~~|```|(?<=end)\n",
 			"patterns": [
 				{
+					"name": "comment.line",
+					"match": "//.+"
+				},
+				{
 					"name": "keyword.control.eve",
 					"match": "^search|end"
 				},
@@ -68,10 +72,6 @@
 				},				{
 					"name": "constant.language",
 					"match": "true|false|none"
-				},
-				{
-					"name": "comment.line",
-					"match": "//.+"
 				}
 			]
 		}
